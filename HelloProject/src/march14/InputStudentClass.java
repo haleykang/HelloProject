@@ -46,13 +46,12 @@ public class InputStudentClass {
 	// 사용자가 과목 이름 적는 함수
 	
 	// 점수 입력 함수 
-	public String [] input_score() {
+	public String input_score() {
 		
 		// 점수를 3 4 5 이렇게 입력받기!
 		s_score = scanner.nextLine();
-		str_score = s_score.split(" ");
-	
-		return str_score;
+		
+		return s_score;
 	}
 	
 	
@@ -69,12 +68,10 @@ public class InputStudentClass {
 		// try~catch
 		try {
 			
-			System.out.print("국어 수학 사화 영어 점수를 입력해주세요 : ");
-			String [] my_score = isclass.input_score();
+			System.out.print("국어 수학 사회 영어 점수를 입력해주세요 : ");
+			String my_score = isclass.input_score();
+			String [] str_score = my_score.split(" ");
 			
-			System.out.println(my_score[0]);
-			System.out.println(my_score[1]);
-			System.out.println(my_score[2]);
 			
 			
 			
