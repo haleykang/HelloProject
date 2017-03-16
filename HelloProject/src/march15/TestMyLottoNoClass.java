@@ -33,22 +33,22 @@ class HelloMyLotto {
 	// 6개 값을 45개의 값 중 하나를 선택에서 isix_array에 저장하기
 	public void choice_no() {
 		
-		for(int i = 0; i <=(isix_array.length-1); ++i) {
+		// for(int i = 0; i <=(isix_array.length-1); ++i) {
 			
-			isix_array[i] = my_array[create_random_no()];
+			// isix_array[i] = my_array[create_random_no()];
 			// System.out.println(isix_array[i]); // 중복되는 값이 나옴
 			
+		for(int j = 0 ; j < 100; ++j) {
 			
-			for(int j = 0; j <= i; ++j) {
-			
-				if (isix_array[i] ==isix_array[j]) {
-					System.out.println(isix_array[i]);
-					--j;
-					break;
-				} // 아 모르게따..
-			}
-			
-			
+			int n = my_array[create_random_no()];
+			int tmp = isix_array[0];
+			isix_array[0] = isix_array[n];
+			isix_array[n] = tmp;
+		}
+		
+		for(int i = 0; i <=(isix_array.length-1); ++i) {
+		System.out.println(isix_array[i]);
+		
 		}
 		
 /*		isix_array[0] = my_array[i];
