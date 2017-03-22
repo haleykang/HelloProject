@@ -177,22 +177,28 @@ class MyButton extends Frame {
 	
 }
 
-class MyButton2 extends Frame {
+/*class MyButton2 extends Frame {
 	
+	Button mybutton [] = new Button [5];
+	
+	for(int i = 0; i < this.mybutton.length; ++i) {
+		
+		mybutton[i] = new Button((i+1) + "");
+	}
 	// Button [] mybutton = new Button [5];
 	
 
-	/*for(int i = 0; i < 5; ++i) {
+	for(int i = 0; i < 5; ++i) {
 		
 		String res = "button" + (i +1);
 		
-		mybutton[i] = new Button(res);*/
+		mybutton[i] = new Button(res);
 		
 		
 	//}
 	
 	
-}
+}*/
 
 
 
