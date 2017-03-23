@@ -12,6 +12,30 @@ package myjava.lang;
 
 import java.util.Scanner;
 import java.util.Random;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+/*
+ * 창 구상
+ * 
+ * 첫번째 줄 : 사용자가 원하는 갯수 만큼의 숫자를 입력 라벨 / 텍스트필드
+ * 두번째 줄 : 랜
+ * 
+ */
+
+class RandomFrame extends Frame implements ActionListener {
+
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}
 
 public class MyRandom {
 

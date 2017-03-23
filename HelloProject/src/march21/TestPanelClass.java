@@ -11,6 +11,8 @@ package march21;
 import java.awt.*;
 import java.awt.event.*;
 
+import javax.xml.soap.Text;
+
 class MyPanelFrame extends Frame implements ActionListener {
 	
 	// 1. 판넬 컨테이너에서 사용할 그리드 레이아웃 배치 관리자 준비
@@ -18,6 +20,8 @@ class MyPanelFrame extends Frame implements ActionListener {
 	
 	// 2. 판넬 컨테이너 준비하기
 	private Panel panel = new Panel(gridLayout);
+	
+	private TextField res_tf = new TextField("",20);
 	
 	// 3. 6개의 버튼 준비하기 + 준비한 버튼은 panel.add(버튼 참조 변수 이름 );
 	// -> 최종 판넬 컨테이너는 Frame 윈도우(창)의 특정 위치에 넣어야함 
@@ -157,6 +161,7 @@ class MyPanelFrame extends Frame implements ActionListener {
 		
 		this.setSize(500,500);
 		
+		this.add(BorderLayout.NORTH, res_tf);
 		
 		// this.add(BorderLayout.NORTH, buttonc_1);
 		this.add(panel);
@@ -172,6 +177,10 @@ class MyPanelFrame extends Frame implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent actionEvent) {
+		
+		// 계산기는 어렵네
+		
+		
 		
 	}
 }
