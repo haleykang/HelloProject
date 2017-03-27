@@ -34,14 +34,14 @@ class LoginFrame extends Frame implements ActionListener {
 	
 	
 	// 첫번째 줄에서 사용할 ID : 라벨 준비
-	private Label id_label = new Label("ID : ");
+	private Label id_label = new Label("ID");
 	
 	
 	// 첫번째 줄에서 사용할 아이디 입력 창 준비하기 
 	private TextField id_tf = new TextField("",20);
 	
 	// 두번째 줄에서 사용할 Password : 라벨 준비
-	private Label pw_label = new Label("Password : ");
+	private Label pw_label = new Label("Password");
 	
 	
 	// 두번째 줄에서 사용할 비밀번호 입력 창 준비

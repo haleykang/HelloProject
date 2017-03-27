@@ -42,7 +42,10 @@ class MyScoreFrame extends Frame implements ActionListener {
 	
 	// 총점 구하기 버튼 선언
 	
-	Button total_bt = new Button("총점 구하기");
+	private Button total_bt = new Button("총점 구하기");
+	
+	// 평균 구하기 버튼
+	private Button avg_bt = new Button("평균 구하기");
 	
 	// 총점이 계산되어서 나오는 창 만들기 
 	// -> 어떻게???????
@@ -51,10 +54,13 @@ class MyScoreFrame extends Frame implements ActionListener {
 	private Label total_label = new Label("총점");
 	private TextField total_tf = new TextField("",20);
 	
+	private Label avg_lb = new Label("평균");
+	private TextField avg_tf = new TextField("", 20);
+	
 	
 	// 그리드 레이아웃 배치 관리자 준비(5행 2열 표를 만들고
 	// 안에 들어가는 컴포넌트들 간의 간격은 2씩
-	private GridLayout gridLayout = new GridLayout(5,2,2,2);
+	private GridLayout gridLayout = new GridLayout(6,2,2,2);
 	
 	// 그리드 레이아웃을 사용하는 판넬 선언
 	//private Panel panel = new Panel();
@@ -69,7 +75,7 @@ class MyScoreFrame extends Frame implements ActionListener {
 	int total_score = 0;
 	
 	// 폰트 바꿀수도 있으니까 폰트 일단 선언
-	private Font font = new Font("굴림체", Font.BOLD,20);
+	private Font font = new Font("굴림체", Font.BOLD,15);
 	{
 		this.kor_label.setFont(font);
 		this.kor_tf.setFont(font);
@@ -80,6 +86,10 @@ class MyScoreFrame extends Frame implements ActionListener {
 		this.total_bt.setFont(font);
 		this.total_label.setFont(font);
 		this.total_tf.setFont(font);
+		this.avg_lb.setFont(font);
+		this.avg_bt.setFont(font);
+		this.avg_tf.setFont(font);
+		
 	}
 	
 	
@@ -248,13 +258,20 @@ public void my_score_event() {
 		this.add(this.math_label);
 		this.add(this.math_tf);
 		
+		
+		
+		
+		// 네번쨰 중
+		this.add(this.total_bt); 
+		this.add(this.avg_bt)
+		;
 		// 네번째 줄 총점 라벨
 		this.add(this.total_label);
 		this.add(this.total_tf);
 		
-		
-		// 다섯번째 총점 구하기 버튼 
-		this.add(this.total_bt); 
+		// 6번째 줄 : 결과 출력
+		this.add(this.avg_lb);
+		this.add(this.avg_tf);
 	//	this.add(panel);
 		// 이걸 길게 늘릴 순 없는지 !!!!!!!!!!!!!! -> 판넬 사용
 		
@@ -368,7 +385,9 @@ public void my_score_event() {
 				return;
 				
 			}
-		*/}
+		*/
+			
+		}
 	
 		
 		// 2-2. 이벤트가 텍스트필드에서 발생하는 경우
